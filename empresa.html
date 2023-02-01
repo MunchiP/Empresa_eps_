@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="empresa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <title>EPS</title>
+</head>
+<body>
+    
+    <div class="head">
+        <h1> EMPRESA PRESTADORA DEL SERVICIO DE SALUD</h1>
+        <p> Por favor ingrese la siguiente información para continuar con su requerimiento</p>
+    </div>
+
+        <div class="datos">
+            <p> 1. Datos del paciente </p>
+            <input type="text" placeholder="Primer nombre" id="N1">
+            <input type="text" placeholder="Segundo nombre" id="N2">
+            <input type="text" placeholder="Primer Apellido" id="P1">
+            <input type="text" placeholder="Segundo Apellido" id="P2">
+        </div>
+
+        <div class="documento">
+            <p> 2. Documento de identificación </p>
+            <input type="text" placeholder="Número" id="numero" maxlength="10" minlength="5" pattern="[0-9]+">
+            <select id="doc">
+                <option value="RC"> Registro Civil </option>
+                <option value="TI"> Targeta de Identidad </option>
+                <option value="CC"> Cédula de Ciudadanía</option>
+                <option value="CE"> Cédula de Extragería </option>
+                <option value="PA"> Pasaporte </option>
+            </select>
+        </div>
+       
+        <div class="categoria">
+            <p> Por favor, identifice su necesidad médica en la siguiente imagen y selecciona la opción</p>
+            <img class="tabla" src="TABLA.png">
+
+            <div class="colores">
+                <button onclick="emergencia('1')" class="opcion1">1</button>
+                <button onclick="emergencia('2')" class="opcion2">2</button>
+                <button onclick="emergencia('3')" class="opcion3">3</button>
+                <button onclick="emergencia('4')" class="opcion4">4</button>
+                <button onclick="emergencia('5')" class="opcion5">5</button>
+            </div>
+        </div>
+        
+        <button class="enviar" onclick="Enviar()"> Enviar </button>
+        
+        <h2 id="resultado"> Resultado </h2>
+
+    <script src="empresa.js"></script>
+</body>
+</html>
